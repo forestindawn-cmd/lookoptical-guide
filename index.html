@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>룩옵티컬 제품 판매 백과사전</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo-wrap">
+    <span class="logo">LOOKOPTICAL</span>
+    <span class="logo-sub">제품 판매 백과사전</span>
+  </div>
+  <div class="header-stats">
+    <span class="stat-pill">브랜드 <span>18+</span></span>
+    <span class="stat-pill">제품 <span>80+</span></span>
+    <span class="stat-pill">가격대 <span>12,500원~439,000원</span></span>
+  </div>
+</header>
+
+<div class="main-wrap">
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="search-wrap">
+      <input type="text" class="search-input" placeholder="모델명, 브랜드 검색..." id="searchInput" oninput="filterSearch()">
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Overview</div>
+      <a class="nav-item active" onclick="showSection('overview')">전체 브랜드 개요</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">자체 브랜드</div>
+      <a class="nav-item" onclick="showSection('looky')">LOOKY 라인 <span class="nav-badge">경제형</span></a>
+      <a class="nav-item" onclick="showSection('flexlite')">FLEXLITE 라인 <span class="nav-badge">기능형</span></a>
+      <a class="nav-item" onclick="showSection('dunn')">DUNN 라인 <span class="nav-badge">프리미엄</span></a>
+      <a class="nav-item" onclick="showSection('zinn')">ZINN 라인 <span class="nav-badge">하이엔드</span></a>
+      <a class="nav-item" onclick="showSection('lc-standard')">LC 스탠다드 라인</a>
+      <a class="nav-item" onclick="showSection('sunglasses')">룩옵 선글라스 (LCG)</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">프리미엄 브랜드</div>
+      <a class="nav-item" onclick="showSection('blackcavaliere')">BLACK CAVALIERE</a>
+      <a class="nav-item" onclick="showSection('edhardy')">ED HARDY</a>
+      <a class="nav-item" onclick="showSection('police')">POLICE <span class="nav-badge">185,000원~</span></a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">럭셔리 브랜드</div>
+      <a class="nav-item" onclick="showSection('luxury')">DIOR · CELINE · FENDI</a>
+      <a class="nav-item" onclick="showSection('bridge')">FERRAGAMO · SANDRO · PAULSMITH</a>
+      <a class="nav-item" onclick="showSection('escada')">ESCADA <span class="nav-badge">고가</span></a>
+      <a class="nav-item" onclick="showSection('mulberry')">MULBERRY <span class="nav-badge">395,000원~</span></a>
+      <a class="nav-item" onclick="showSection('longchamp')">LONGCHAMP <span class="nav-badge">295,000원~</span></a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">스포츠 브랜드</div>
+      <a class="nav-item" onclick="showSection('sports')">NIKE</a>
+      <a class="nav-item" onclick="showSection('fila')">FILA</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">판매 가이드</div>
+      <a class="nav-item" onclick="showSection('guide')">브랜드 포지셔닝 전략</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="content" id="contentArea">
+
+    <!-- ==================== OVERVIEW ==================== -->
+    <div class="section active" id="sec-overview">
+      <div class="brand-hero" style="border-bottom:none;margin-bottom:32px;">
+        <div class="brand-emblem">L</div>
+        <div class="brand-info">
+          <div class="brand-name">LOOKOPTICAL 브랜드 지도</div>
+          <div class="brand-tagline">안경은 얼굴이다</div>
+          <div class="brand-desc">룩옵티컬이 취급하는 모든 브랜드를 가격대·포지셔닝별로 정리한 판매원 전용 백과사전입니다. 각 브랜드를 클릭하면 제품별 상세 판매 포인트를 확인할 수 있습니다.</div>
+        </div>
+      </div>
+
+      <div class="sub-heading">가격대별 브랜드 포지셔닝</div>
+      <div class="overview-grid">
+        <div class="overview-card" onclick="showSection('looky')">
+          <div class="ov-icon">🟢</div>
+          <div class="ov-brand">LOOKY</div>
+          <div class="ov-desc">초경제형 엔트리라인</div>
+          <div class="ov-price">12,500원</div>
+          <div class="ov-items">안경테 5종+</div>
+        </div>
+        <div class="overview-card" onclick="showSection('flexlite')">
+          <div class="ov-icon">⚡</div>
+          <div class="ov-brand">FLEXLITE</div>
+          <div class="ov-desc">탄성 소재 기능형</div>
+          <div class="ov-price">18,500원</div>
+          <div class="ov-items">안경테 2종+</div>
+        </div>
+        <div class="overview-card" onclick="showSection('lc-standard')">
+          <div class="ov-icon">🔵</div>
+          <div class="ov-brand">LC 스탠다드</div>
+          <div class="ov-desc">범용 메인 라인</div>
+          <div class="ov-price">32,500~68,500원</div>
+          <div class="ov-items">다양한 스타일</div>
+        </div>
+        <div class="overview-card" onclick="showSection('sunglasses')">
+          <div class="ov-icon">🕶️</div>
+          <div class="ov-brand">LCG 선글라스</div>
+          <div class="ov-desc">자체 선글라스 라인</div>
+          <div class="ov-price">69,000원~</div>
+          <div class="ov-items">고글형·보잉형</div>
+        </div>
+        <div class="overview-card" onclick="showSection('dunn')">
+          <div class="ov-icon">🟡</div>
+          <div class="ov-brand">DUNN</div>
+          <div class="ov-desc">프리미엄 자체 라인</div>
+          <div class="ov-price">68,500원</div>
+          <div class="ov-items">고급 아세테이트</div>
+        </div>
+        <div class="overview-card" onclick="showSection('zinn')">
+          <div class="ov-icon">⭐</div>
+          <div class="ov-brand">ZINN</div>
+          <div class="ov-desc">자체 하이엔드 라인</div>
+          <div class="ov-price">68,500원</div>
+          <div class="ov-items">프리미엄 메탈</div>
+        </div>
+        <div class="overview-card" onclick="showSection('blackcavaliere')">
+          <div class="ov-icon">🖤</div>
+          <div class="ov-brand">BLACK CAVALIERE</div>
+          <div class="ov-desc">이탈리아 감성 뿔테</div>
+          <div class="ov-price">125,000원</div>
+          <div class="ov-items">SPADA·SCUDO·CASTELLO 등</div>
+        </div>
+        <div class="overview-card" onclick="showSection('edhardy')">
+          <div class="ov-icon">🐯</div>
+          <div class="ov-brand">ED HARDY</div>
+          <div class="ov-desc">아티스틱 스트릿 럭셔리</div>
+          <div class="ov-price">185,000~245,000원</div>
+          <div class="ov-items">타투 아트 DNA</div>
+        </div>
+        <div class="overview-card" onclick="showSection('luxury')">
+          <div class="ov-icon">💎</div>
+          <div class="ov-brand">DIOR · CELINE · FENDI</div>
+          <div class="ov-desc">글로벌 럭셔리 하우스</div>
+          <div class="ov-price">고가</div>
+          <div class="ov-items">선글라스·안경테</div>
+        </div>
+        <div class="overview-card" onclick="showSection('bridge')">
+          <div class="ov-icon">🌿</div>
+          <div class="ov-brand">FERRAGAMO · SANDRO · PAULSMITH</div>
+          <div class="ov-desc">컨템포러리 럭셔리</div>
+          <div class="ov-price">중고가</div>
+          <div class="ov-items">패션 아이웨어</div>
+        </div>
+        <div class="overview-card" onclick="showSection('sports')">
+          <div class="ov-icon">🏃</div>
+          <div class="ov-brand">NIKE</div>
+          <div class="ov-desc">스포츠 퍼포먼스</div>
+          <div class="ov-price">중가</div>
+          <div class="ov-items">기능성 폴리카보네이트</div>
+        </div>
+        <div class="overview-card" onclick="showSection('fila')">
+          <div class="ov-icon">🎾</div>
+          <div class="ov-brand">FILA</div>
+          <div class="ov-desc">레트로 스포츠 아이웨어</div>
+          <div class="ov-price">중가~</div>
+          <div class="ov-items">에어플레인 티탄 포함</div>
+        </div>
+        <div class="overview-card" onclick="showSection('police')">
+          <div class="ov-icon">🦅</div>
+          <div class="ov-brand">POLICE</div>
+          <div class="ov-desc">이탈리아 남성 프리미엄</div>
+          <div class="ov-price">185,000원~</div>
+          <div class="ov-items">연예인 착용 라인</div>
+        </div>
+        <div class="overview-card" onclick="showSection('escada')">
+          <div class="ov-icon">🌸</div>
+          <div class="ov-brand">ESCADA</div>
+          <div class="ov-desc">독일 럭셔리 여성 패션</div>
+          <div class="ov-price">439,000원~</div>
+          <div class="ov-items">선글라스 특화</div>
+        </div>
+        <div class="overview-card" onclick="showSection('mulberry')">
+          <div class="ov-icon">🍂</div>
+          <div class="ov-brand">MULBERRY</div>
+          <div class="ov-desc">영국 헤리티지 럭셔리</div>
+          <div class="ov-price">395,000원~</div>
+          <div class="ov-items">선글라스 라인</div>
+        </div>
+        <div class="overview-card" onclick="showSection('longchamp')">
+          <div class="ov-icon">🐴</div>
+          <div class="ov-brand">LONGCHAMP</div>
+          <div class="ov-desc">파리지앵 아이웨어</div>
+          <div class="ov-price">295,000원~</div>
+          <div class="ov-items">안경테·선글라스</div>
+        </div>
+      </div>
+
+      <div class="sub-heading">모델 번호 해독법</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:32px;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:16px;letter-spacing:.06em;">LC5912 <span style="color:var(--gold)">110</span> <span style="color:var(--blue)">53</span></div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;font-size:13px;">
+          <div>
+            <div style="color:var(--muted);margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;">모델 시리즈</div>
+            <div style="color:var(--cream)">LC5912 = 시리즈 코드</div>
+            <div style="color:var(--muted);font-size:11px;margin-top:2px;">LC = LookOptical 자체 / EL = Flexlite</div>
+          </div>
+          <div>
+            <div style="color:var(--gold);margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;">컬러 코드</div>
+            <div style="color:var(--cream)">110 = 블랙/실버 계열</div>
+            <div style="color:var(--muted);font-size:11px;margin-top:2px;">220=골드·크림 / 330=브라운 / 440=다크 / 520=투톤</div>
+          </div>
+          <div>
+            <div style="color:var(--blue);margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;">렌즈 폭 (mm)</div>
+            <div style="color:var(--cream)">53 = 렌즈 가로 폭 53mm</div>
+            <div style="color:var(--muted);font-size:11px;margin-top:2px;">50이하=소 / 51-52=중 / 53-54=대 / 55+=특대</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-heading">사이즈 가이드</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:24px;">
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;text-align:center;font-size:12px;">
+          <div style="background:var(--bg3);border-radius:8px;padding:12px;">
+            <div style="color:var(--gold);font-size:14px;font-weight:500;margin-bottom:4px;">XS</div>
+            <div style="color:var(--cream)">~49mm</div>
+            <div style="color:var(--muted);font-size:11px;margin-top:4px;">얼굴 작은 분 / 아동·여성</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:12px;">
+            <div style="color:var(--gold);font-size:14px;font-weight:500;margin-bottom:4px;">S</div>
+            <div style="color:var(--cream)">50~51mm</div>
+            <div style="color:var(--muted);font-size:11px;margin-top:4px;">소형 / 여성 평균</div>
+          </div>
+          <div style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:12px;">
+            <div style="color:var(--gold);font-size:14px;font-weight:500;margin-bottom:4px;">M ⭐</div>
+            <div style="color:var(--cream)">52~53mm</div>
+            <div style="color:var(--muted);font-size:11px;margin-top:4px;">한국인 평균 / 가장 인기</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:12px;">
+            <div style="color:var(--gold);font-size:14px;font-weight:500;margin-bottom:4px;">L</div>
+            <div style="color:var(--cream)">54~55mm</div>
+            <div style="color:var(--muted);font-size:11px;margin-top:4px;">대형 / 남성 평균</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:12px;">
+            <div style="color:var(--gold);font-size:14px;font-weight:500;margin-bottom:4px;">XL</div>
+            <div style="color:var(--cream)">56mm+</div>
+            <div style="color:var(--muted);font-size:11px;margin-top:4px;">특대형 / 선글라스</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== LOOKY ==================== -->
+    <div class="section" id="sec-looky">
+      <div class="brand-hero">
+        <div class="brand-emblem">LY</div>
+        <div class="brand-info">
+          <div class="brand-name">LOOKY</div>
+          <div class="brand-tagline">Look Optical Signature Entry Line</div>
+          <div class="brand-desc">룩옵티컬 자체 기획 초경제형 라인. 12,500원의 파격적 가격으로 학생·가벼운 교체 수요를 흡수. 가성비를 최우선으로 하되 디자인도 충분히 세련됨. 2~30대 여성 주 구매층. 유행에 민감한 컬러/형태 실험이 자유로운 포지션.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>12,500원</b></span>
+            <span class="meta-chip">타깃 <b>10~30대</b></span>
+            <span class="meta-chip">스타일 <b>뿔테·콤비</b></span>
+            <span class="meta-chip">포지션 <b>엔트리 / 교체용</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <span class="filter-label">필터</span>
+        <button class="filter-btn on" onclick="toggleFilter(this,'looky','all')">전체</button>
+        <button class="filter-btn" onclick="toggleFilter(this,'looky','available')">재고있음</button>
+      </div>
+
+      <div class="products-grid" id="grid-looky">
+
+        <div class="product-card" data-brand="looky" data-status="available">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LC5990 110 51</div>
+              <div class="card-subname">LOOKY · 소형 블랙</div>
+            </div>
+            <div class="card-price">12,500원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:10%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">뿔테</span>
+              <span class="tag tag-face">소형얼굴</span>
+              <span class="tag tag-tier">엔트리</span>
+              <span class="tag tag-line">51mm S사이즈</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>51mm (S — 소얼굴·여성)</td></tr>
+              <tr><td>컬러코드</td><td>110 — 블랙 프레임</td></tr>
+              <tr><td>소재</td><td>TR-90 탄성 플라스틱</td></tr>
+              <tr><td>스타일</td><td>뿔테 / 사각 실루엣</td></tr>
+              <tr><td>추천얼굴</td><td>둥근형 · 계란형</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">가격에 놀라는 고객에게 "렌즈만 넣으시면 됩니다"로 클로징. 교체 수요나 추가 구매 유도에 최적. "하나 더 맞추실 때 고려해보세요" 번들 세일 활용.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-brand="looky" data-status="available">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LC5994 222 50</div>
+              <div class="card-subname">LOOKY · 라이트 컬러</div>
+            </div>
+            <div style="text-align:right">
+              <div class="card-price">12,500원</div>
+              <span class="soldout-tag">품절</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:10%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">뿔테</span>
+              <span class="tag tag-face">소형얼굴</span>
+              <span class="tag tag-tier">엔트리</span>
+              <span class="tag tag-line">50mm XS</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>50mm (XS — 미니 얼굴)</td></tr>
+              <tr><td>컬러코드</td><td>222 — 크림·투명 계열</td></tr>
+              <tr><td>스타일</td><td>클리어 뿔테</td></tr>
+              <tr><td>추천얼굴</td><td>계란형 · 하트형</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">클리어/투명 뿔테는 봄 시즌 최고 인기. 재입고 시 우선 연락 명단 구축 추천. 품절 중 "유사 컬러로 LC5995 추천" 연결 가능.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-brand="looky" data-status="available">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LC5995 110 51</div>
+              <div class="card-subname">LOOKY · 뉴 에디션</div>
+            </div>
+            <div style="text-align:right">
+              <div class="card-price">12,500원</div>
+              <span class="soldout-tag">품절</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:10%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">뿔테</span>
+              <span class="tag tag-face">소·중형</span>
+              <span class="tag tag-tier">엔트리</span>
+              <span class="tag tag-line">2026 신상</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>51mm (S)</td></tr>
+              <tr><td>컬러코드</td><td>110 — 블랙</td></tr>
+              <tr><td>출시</td><td>2026년 신상</td></tr>
+              <tr><td>추천얼굴</td><td>둥근형 · 계란형</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">신상 타이틀로 품절 전 선점 심리 자극. "이번에 새로 들어온 거예요" 오프닝 활용. 재입고 대기 명단 필히 확보.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-brand="looky" data-status="available">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LC6002 661 52</div>
+              <div class="card-subname">LOOKY · 컬러 에디션</div>
+            </div>
+            <div style="text-align:right">
+              <div class="card-price">12,500원</div>
+              <span class="soldout-tag">품절</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:10%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">뿔테</span>
+              <span class="tag tag-face">중형얼굴</span>
+              <span class="tag tag-tier">엔트리</span>
+              <span class="tag tag-line">컬러 661</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>52mm (M)</td></tr>
+              <tr><td>컬러코드</td><td>661 — 컬러 계열 (버건디/브라운 톤 추정)</td></tr>
+              <tr><td>스타일</td><td>뿔테 / 중형 사이즈</td></tr>
+              <tr><td>추천얼굴</td><td>계란형 · 각진형</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">가을 시즌 컬러 뿔테 수요 최고. 661 컬러는 내추럴 메이크업과 찰떡. 가을 outfit coordination 연결해서 설명하면 구매율 상승.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== FLEXLITE ==================== -->
+    <div class="section" id="sec-flexlite">
+      <div class="brand-hero">
+        <div class="brand-emblem">FL</div>
+        <div class="brand-info">
+          <div class="brand-name">FLEXLITE</div>
+          <div class="brand-tagline">탄성 복원 경량 기능 라인</div>
+          <div class="brand-desc">TR-90 초경량 탄성 소재를 사용한 기능성 라인. 구부려도 원형 복원. 아동·활동적인 분·안경 자주 망가뜨리는 고객에게 최적. "얼마나 질겨요?"라는 질문에 실시간 시연이 가능한 강력한 세일즈 포인트.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>18,500원</b></span>
+            <span class="meta-chip">소재 <b>TR-90 탄성 나일론</b></span>
+            <span class="meta-chip">특징 <b>꺾어도 복원</b></span>
+            <span class="meta-chip">타깃 <b>활동적·아동·운동</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">EL5024 331 50</div>
+              <div class="card-subname">FLEXLITE · 브라운 소형</div>
+            </div>
+            <div class="card-price">18,500원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:15%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">탄성 뿔테</span>
+              <span class="tag tag-face">소형얼굴</span>
+              <span class="tag tag-tier">기능형</span>
+              <span class="tag tag-line">TR-90</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>50mm (XS~S)</td></tr>
+              <tr><td>컬러코드</td><td>331 — 브라운/토트 계열</td></tr>
+              <tr><td>소재</td><td>EL= Elastic Light (TR-90)</td></tr>
+              <tr><td>내구성</td><td>구부려도 원형 복원, 파손율 최소</td></tr>
+              <tr><td>추천대상</td><td>아동·스포츠·자주 망가뜨리는 고객</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">필살 시연 포인트</div>
+              <div class="tip-text">매장에서 직접 구부려 보여주세요. "이렇게 꺾어도 원래대로 돌아와요." 고객이 직접 꺾어보게 하면 구매 확률 3배 이상. 아이 있는 부모 고객에게 강력 추천 아이템.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">EL4097 114 51</div>
+              <div class="card-subname">FLEXLITE · 블랙 중형</div>
+            </div>
+            <div class="card-price">18,500원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:15%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">탄성 뿔테</span>
+              <span class="tag tag-face">소·중형</span>
+              <span class="tag tag-tier">기능형</span>
+              <span class="tag tag-line">TR-90</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>51mm (S)</td></tr>
+              <tr><td>컬러코드</td><td>114 — 블랙 바리에이션</td></tr>
+              <tr><td>소재</td><td>TR-90 (탄성 초경량)</td></tr>
+              <tr><td>무게감</td><td>매우 가벼움 — 오래 써도 귀 안 아픔</td></tr>
+              <tr><td>추천대상</td><td>장시간 착용자 · PC방 · 직장인</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">"하루종일 써도 귀 안 아픈 게 최고예요"라는 고객의 말을 먼저 꺼내면 공감 즉시 형성. 귀 통증 경험있는 고객에게 1순위 추천.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== DUNN ==================== -->
+    <div class="section" id="sec-dunn">
+      <div class="brand-hero">
+        <div class="brand-emblem">DN</div>
+        <div class="brand-info">
+          <div class="brand-name">DUNN</div>
+          <div class="brand-tagline">Look Optical Premium Signature</div>
+          <div class="brand-desc">룩옵티컬 자체 프리미엄 라인. 고급 아세테이트 소재로 컬러 깊이와 표면 질감이 일반 라인과 차원이 다름. 68,500원이라는 가격대에서 브랜드 안경보다 합리적이라는 포지션. 30~40대 직장인·전문직 타깃.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>68,500원</b></span>
+            <span class="meta-chip">소재 <b>고급 아세테이트</b></span>
+            <span class="meta-chip">타깃 <b>30~40대 직장인</b></span>
+            <span class="meta-chip">포지션 <b>프리미엄 자체브랜드</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LC5964 330 53</div>
+              <div class="card-subname">DUNN · 브라운 M사이즈</div>
+            </div>
+            <div class="card-price">68,500원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:55%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">아세테이트 뿔테</span>
+              <span class="tag tag-face">중형얼굴</span>
+              <span class="tag tag-tier">프리미엄</span>
+              <span class="tag tag-line">53mm M</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>53mm (M — 한국인 평균)</td></tr>
+              <tr><td>컬러코드</td><td>330 — 클래식 브라운/토트</td></tr>
+              <tr><td>소재</td><td>고급 아세테이트 (광택·깊이 우수)</td></tr>
+              <tr><td>스타일</td><td>클래식 뿔테 / 비즈니스 캐주얼</td></tr>
+              <tr><td>추천얼굴</td><td>계란형 · 각진형 · 하트형</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">손으로 쥐어보게 해서 소재 무게감 전달. "일반 플라스틱과 달리 이게 아세테이트예요. 느껴지시죠?" 브랜드 안경 대비 가격 우위 언급. 330 브라운은 피부톤 가리지 않아 실패 없는 컬러임을 강조.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card soldout">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LC5964 440 53</div>
+              <div class="card-subname">DUNN · 다크 M사이즈</div>
+            </div>
+            <div style="text-align:right">
+              <div class="card-price">68,500원</div>
+              <span class="soldout-tag">품절</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:55%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">아세테이트 뿔테</span>
+              <span class="tag tag-face">중형얼굴</span>
+              <span class="tag tag-tier">프리미엄</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>53mm (M)</td></tr>
+              <tr><td>컬러코드</td><td>440 — 다크 / 딥네이비·블랙 계열</td></tr>
+              <tr><td>수요</td><td>높음 — 품절 빈번, 재입고 주시 필요</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">품절 대응 전략</div>
+              <div class="tip-text">330 브라운으로 연결 추천. "440은 지금 인기가 많아서 품절이에요. 330도 정말 잘 어울리실 것 같아요." 웨이팅 명단 확보 필수.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== ZINN ==================== -->
+    <div class="section" id="sec-zinn">
+      <div class="brand-hero">
+        <div class="brand-emblem">ZN</div>
+        <div class="brand-info">
+          <div class="brand-name">ZINN</div>
+          <div class="brand-tagline">Look Optical High-End Metal Signature</div>
+          <div class="brand-desc">룩옵티컬 자체 하이엔드 메탈 라인. 얇고 정교한 메탈 프레임으로 성숙하고 지적인 분위기 연출. TITAN(티타늄) 소재 적용 제품 포함. 40대 이상 전문직·비즈니스맨 주요 타깃. "조용한 럭셔리" 트렌드 정확히 부합.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>68,500원</b></span>
+            <span class="meta-chip">소재 <b>프리미엄 메탈·티타늄</b></span>
+            <span class="meta-chip">타깃 <b>40대 전문직·비즈니스</b></span>
+            <span class="meta-chip">2026 트렌드 <b>와이어프레임</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LC5962 111 54</div>
+              <div class="card-subname">ZINN · 클래식 메탈</div>
+            </div>
+            <div class="card-price">68,500원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:55%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">프리미엄 메탈</span>
+              <span class="tag tag-face">중·대형얼굴</span>
+              <span class="tag tag-tier">하이엔드</span>
+              <span class="tag tag-line">54mm L</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>54mm (L — 남성 평균)</td></tr>
+              <tr><td>컬러코드</td><td>111 — 실버/건메탈</td></tr>
+              <tr><td>소재</td><td>정밀 메탈 프레임</td></tr>
+              <tr><td>스타일</td><td>비즈니스 세미림리스·메탈</td></tr>
+              <tr><td>추천얼굴</td><td>계란형 · 둥근형 · 사각형</td></tr>
+              <tr><td>추천스타일</td><td>정장·비즈니스 캐주얼</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">"2026년 가장 핫한 트렌드가 바로 이 얇은 메탈 프레임이에요." 지적이고 세련된 인상 연출 강조. 40대 이상 남성에게 "젊어 보인다"는 표현 대신 "세련되고 차분하다"를 사용. 슈트·코트와의 매칭 포인트 언급.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== LC STANDARD ==================== -->
+    <div class="section" id="sec-lc-standard">
+      <div class="brand-hero">
+        <div class="brand-emblem">LC</div>
+        <div class="brand-info">
+          <div class="brand-name">LC 스탠다드 라인</div>
+          <div class="brand-tagline">Look Optical Core Collection</div>
+          <div class="brand-desc">룩옵티컬 메인 라인. 32,500원~68,500원의 폭넓은 가격대로 다양한 고객층 커버. 메탈·뿔테·콤비 스타일 모두 포함. 스테디셀러 LC5912가 여기에 속함. 전 연령·성별 구매 가능.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>32,500~68,500원</b></span>
+            <span class="meta-chip">스타일 <b>전 스타일</b></span>
+            <span class="meta-chip">타깃 <b>전 연령</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card" style="border-color:rgba(201,168,76,0.3)">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LC5912 110 53</div>
+              <div class="card-subname" style="color:var(--gold2)">⭐ 베스트셀러 · 스테디</div>
+            </div>
+            <div class="card-price">32,500원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:26%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">메탈 / 콤비</span>
+              <span class="tag tag-face">중형얼굴</span>
+              <span class="tag tag-tier">스탠다드</span>
+              <span class="tag tag-line">스테디셀러</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>53mm (M — 한국인 평균)</td></tr>
+              <tr><td>컬러코드</td><td>110 — 실버/블랙 콤비</td></tr>
+              <tr><td>소재</td><td>메탈 프레임 + 플라스틱 코팅</td></tr>
+              <tr><td>스타일</td><td>반무테 / 하금 / 클래식</td></tr>
+              <tr><td>추천얼굴</td><td>전 얼굴형 (범용)</td></tr>
+              <tr><td>인기도</td><td>매장 판매 TOP 아이템 — 기획전 주인공</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">룩옵 공식 "BEST ITEM" 지정 제품. "저희 매장에서 제일 많이 나가는 모델이에요"라는 한마디가 결정타. 가격 대비 완성도가 높아 선물용으로도 추천 가능. 안심 구매 심리 자극 최강 카드.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LC5722 110 54</div>
+              <div class="card-subname">스탠다드 · 대형 블랙</div>
+            </div>
+            <div class="card-price">32,500원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:26%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">메탈</span>
+              <span class="tag tag-face">중·대형얼굴</span>
+              <span class="tag tag-tier">스탠다드</span>
+              <span class="tag tag-line">54mm L</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>54mm (L — 남성 평균)</td></tr>
+              <tr><td>컬러코드</td><td>110 — 블랙/실버</td></tr>
+              <tr><td>스타일</td><td>클래식 메탈</td></tr>
+              <tr><td>추천대상</td><td>중·대형 얼굴 남성</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">LC5912보다 1mm 크다는 점 강조. 얼굴이 넓은 남성 고객에게 "이게 조금 더 여유있어서 편하실 거예요" 멘트 효과적.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LC5947 220 52</div>
+              <div class="card-subname">스탠다드 · 골드 라이트</div>
+            </div>
+            <div class="card-price">68,500원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:55%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">메탈 골드</span>
+              <span class="tag tag-face">소·중형</span>
+              <span class="tag tag-tier">미드급</span>
+              <span class="tag tag-line">52mm M</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>52mm (S~M)</td></tr>
+              <tr><td>컬러코드</td><td>220 — 골드/라이트 계열</td></tr>
+              <tr><td>스타일</td><td>골드 메탈 / 페미닌</td></tr>
+              <tr><td>추천대상</td><td>30~40대 여성 / 따뜻한 피부톤</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">골드 프레임은 따뜻한 웜톤 피부에 특히 화사하게. 피부톤 분석 후 "웜톤이시라 골드가 정말 잘 어울리세요"로 개인화 추천 연결.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== SUNGLASSES ==================== -->
+    <div class="section" id="sec-sunglasses">
+      <div class="brand-hero">
+        <div class="brand-emblem">☀</div>
+        <div class="brand-info">
+          <div class="brand-name">LCG 선글라스</div>
+          <div class="brand-tagline">Look Optical Sunglasses Collection</div>
+          <div class="brand-desc">룩옵티컬 자체 선글라스 라인. UV400 차단 기본 탑재. 고글형(LCG7007) 등 2026 트렌드에 부합하는 실루엣. 69,000원대 합리적 가격에 다양한 컬러 제공. 여름·봄 시즌 핵심 판매 아이템.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>69,000원~</b></span>
+            <span class="meta-chip">UV 차단 <b>UV400</b></span>
+            <span class="meta-chip">사이즈 <b>59mm XL</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LCG7007 BLACK 59</div>
+              <div class="card-subname">고글 선글라스 · 블랙</div>
+            </div>
+            <div class="card-price">69,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:56%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">고글형</span>
+              <span class="tag tag-face">중·대형얼굴</span>
+              <span class="tag tag-tier">2026 트렌드</span>
+              <span class="tag tag-line">59mm XL</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>59mm (XL — 오버사이즈)</td></tr>
+              <tr><td>컬러</td><td>블랙 렌즈 + 블랙 프레임</td></tr>
+              <tr><td>UV차단</td><td>UV400 완전 차단</td></tr>
+              <tr><td>스타일</td><td>고글형 / 랩어라운드 / 스포츠럭셔리</td></tr>
+              <tr><td>추천얼굴</td><td>계란형 · 긴형</td></tr>
+              <tr><td>트렌드</td><td>2026 쉴드·고글 스타일 대세</td></tr>
+            </table>
+            <div class="color-dots">
+              <span class="cdot" style="background:#111" data-color="BLACK"></span>
+            </div>
+            <div class="tip-box" style="margin-top:12px">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">"2026년 가장 핫한 스타일이 바로 이 고글·쉴드형이에요." 인스타그램·셀럽 착용 이미지와 연결. 드라이브·야외 활동 UV 차단 기능도 동시 강조. 블랙 컬러는 계절·복장 타지 않는 만능 선택.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LCG7007 MAZZGREY 59</div>
+              <div class="card-subname">고글 선글라스 · 매즈그레이</div>
+            </div>
+            <div class="card-price">69,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:56%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">고글형</span>
+              <span class="tag tag-face">중·대형얼굴</span>
+              <span class="tag tag-tier">2026 트렌드</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>59mm (XL)</td></tr>
+              <tr><td>컬러</td><td>MAZZGREY — 매트 그레이 / 연기 느낌</td></tr>
+              <tr><td>특징</td><td>반투명 연기색, 눈 비침 없음</td></tr>
+              <tr><td>스타일</td><td>도심 스트릿·페스티벌</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">그레이 렌즈는 색 왜곡 없이 자연색 유지 — 드라이브 최적. "눈이 얼마나 보이냐"를 신경쓰는 고객에게 MAZZGREY의 반투명 효과 어필. 블랙과 2개 세트 구매 유도 가능.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LCG7007 MATTBLACK 59</div>
+              <div class="card-subname">고글 선글라스 · 매트블랙</div>
+            </div>
+            <div class="card-price">69,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:56%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">고글형</span>
+              <span class="tag tag-face">중·대형얼굴</span>
+              <span class="tag tag-tier">2026 트렌드</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>59mm (XL)</td></tr>
+              <tr><td>컬러</td><td>MATTBLACK — 무광 블랙 (유광BLACK과 구별)</td></tr>
+              <tr><td>특징</td><td>무광 특유의 고급스러운 무드</td></tr>
+              <tr><td>스타일</td><td>스트릿·미니멀·올블랙룩</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">유광 블랙 vs 무광 블랙 차이를 실물로 보여주면 고객 자연스럽게 2개 비교 후 결정. "무광이 더 도시적이에요"라는 표현 유효. 남성 고객 선호도 높음.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="sub-heading">LCS 시리즈 — 추가 선글라스 라인</div>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LCS4305 BLACK 54</div>
+              <div class="card-subname">룩옵 선글라스 · 54mm</div>
+            </div>
+            <div class="card-price">69,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:56%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">스퀘어·보잉</span>
+              <span class="tag tag-face">중·대형얼굴</span>
+              <span class="tag tag-tier">자체브랜드</span>
+              <span class="tag tag-line">54mm L</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>54mm (L — 남성·대형)</td></tr>
+              <tr><td>컬러</td><td>BLACK — 유광 블랙 프레임</td></tr>
+              <tr><td>시리즈</td><td>LCS = LookOptical Color Sunglass</td></tr>
+              <tr><td>UV차단</td><td>UV400</td></tr>
+              <tr><td>추천대상</td><td>중·대형 얼굴 남녀 / 드라이브·야외</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">LCG7007(59mm)보다 작아 일반 얼굴형에 더 잘 맞음. "오버사이즈보다 좀 더 일상적인 느낌 원하시면 이게 낫겠어요." LCG7007과 나란히 비교해서 고객 취향 확인.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LCS4297 3컬러</div>
+              <div class="card-subname">룩옵 신상 선글라스</div>
+            </div>
+            <div class="card-price">65,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:52%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">다양한 스타일</span>
+              <span class="tag tag-face">중형얼굴</span>
+              <span class="tag tag-tier">신상</span>
+              <span class="tag tag-line">3컬러 구성</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>컬러</td><td>3컬러 구성 (블랙·브라운·그레이 계열)</td></tr>
+              <tr><td>포지션</td><td>신상 / 시즌 기획 제품</td></tr>
+              <tr><td>가격</td><td>65,000원 (온라인 프로모션 가 58,500원)</td></tr>
+              <tr><td>활용</td><td>시즌 기획전·신상 오프닝 아이템</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">"이번에 새로 나온 거예요" 신상 타이틀로 접근. 3컬러를 모두 디스플레이해 눈길을 끌고, 고객이 가장 오래 시선 머무는 컬러로 자연스럽게 추천 시작.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="section" id="sec-blackcavaliere">
+      <div class="brand-hero">
+        <div class="brand-emblem">BC</div>
+        <div class="brand-info">
+          <div class="brand-name">BLACK CAVALIERE</div>
+          <div class="brand-tagline">Italian Craftsmanship · Premium Acetate</div>
+          <div class="brand-desc">이탈리아 감성의 프리미엄 수제 뿔테 브랜드. 고급 아세테이트 소재와 정교한 마감이 특징. SPADA(검), SCUDO(방패), CASTELLO(성) 등 이탈리아어 시리즈명 사용. 125,000원 균일가로 가성비 럭셔리 포지션. 진짜 명품의 절반 가격에 아세테이트 퀄리티.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>125,000원 균일</b></span>
+            <span class="meta-chip">소재 <b>고급 아세테이트</b></span>
+            <span class="meta-chip">원산지 <b>이탈리아 디자인</b></span>
+            <span class="meta-chip">타깃 <b>30~50대 패션피플</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-heading">CASTELLO 시리즈 (BC7024)</div>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">BC7024 MATTBLACK 52</div>
+              <div class="card-subname">CASTELLO · 매트 블랙</div>
+            </div>
+            <div class="card-price">125,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:78%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">아세테이트 뿔테</span>
+              <span class="tag tag-face">중형얼굴</span>
+              <span class="tag tag-tier">프리미엄</span>
+              <span class="tag tag-line">CASTELLO</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>52mm (M)</td></tr>
+              <tr><td>컬러</td><td>MATTBLACK — 무광 블랙 아세테이트</td></tr>
+              <tr><td>소재</td><td>이탈리안 감성 고급 아세테이트</td></tr>
+              <tr><td>시리즈명</td><td>CASTELLO = 이탈리아어 "성(城)"</td></tr>
+              <tr><td>스타일</td><td>클래식 두꺼운 뿔테 / 지적·고급</td></tr>
+              <tr><td>추천얼굴</td><td>계란형 · 긴형 · 하트형</td></tr>
+            </table>
+            <div class="color-dots">
+              <span class="cdot" style="background:#1a1a1a" data-color="MATTBLACK"></span>
+              <span class="cdot" style="background:#666" data-color="GUN"></span>
+              <span class="cdot" style="background:#c0c0c0" data-color="SILVER"></span>
+            </div>
+            <div class="tip-box" style="margin-top:12px">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">"CASTELLO는 이탈리아어로 성이에요. 이름처럼 견고하고 품격있는 게 특징이에요." 아세테이트 무게감·광택을 직접 만져보게 유도. 125,000원이 브랜드 대비 얼마나 합리적인지 비교 언급 가능.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">BC7024 GUN 52</div>
+              <div class="card-subname">CASTELLO · 건메탈</div>
+            </div>
+            <div class="card-price">125,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:78%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">아세테이트 뿔테</span>
+              <span class="tag tag-face">중형얼굴</span>
+              <span class="tag tag-tier">프리미엄</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>컬러</td><td>GUN — 건메탈 / 다크그레이 아세테이트</td></tr>
+              <tr><td>무드</td><td>시크·미스터리·성숙</td></tr>
+              <tr><td>추천대상</td><td>올블랙·그레이 즐기는 남성</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">GUN 컬러는 MATTBLACK보다 조금 더 중후한 느낌. "좀 더 어른스럽고 시크한 느낌을 원하시면 GUN이에요" — 40대 이상 남성 강력 추천.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card soldout">
+          <div class="card-header">
+            <div>
+              <div class="card-model">BC7024 SILVER 52</div>
+              <div class="card-subname">CASTELLO · 실버</div>
+            </div>
+            <div style="text-align:right">
+              <div class="card-price">125,000원</div>
+              <span class="soldout-tag">품절</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="tag-row">
+              <span class="tag tag-style">아세테이트 뿔테</span>
+              <span class="tag tag-tier">프리미엄</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>컬러</td><td>SILVER — 밝은 실버 아세테이트</td></tr>
+              <tr><td>무드</td><td>모던·클린·미래적</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">품절 대응</div>
+              <div class="tip-text">실버 원하는 고객에게 "재입고되면 연락드릴게요" 명단 확보. 임시 대안으로 SCUDO CRYSTAL 추천.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-heading">SCUDO 시리즈 (BC7022)</div>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">BC7022 BLACK 50</div>
+              <div class="card-subname">SCUDO · 블랙 소형</div>
+            </div>
+            <div class="card-price">125,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:78%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">아세테이트 뿔테</span>
+              <span class="tag tag-face">소·중형</span>
+              <span class="tag tag-tier">프리미엄</span>
+              <span class="tag tag-line">SCUDO 50mm</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>50mm (XS~S)</td></tr>
+              <tr><td>컬러</td><td>BLACK — 유광 블랙 아세테이트</td></tr>
+              <tr><td>시리즈명</td><td>SCUDO = 이탈리아어 "방패"</td></tr>
+              <tr><td>스타일</td><td>오벌·라운드형 뿔테 / 레트로·아트</td></tr>
+              <tr><td>추천얼굴</td><td>각진형 · 사각형 (부드럽게 연출)</td></tr>
+            </table>
+            <div class="color-dots">
+              <span class="cdot" style="background:#111" data-color="BLACK"></span>
+              <span class="cdot" style="background:#888" data-color="GREY"></span>
+              <span class="cdot" style="background:#f0ead8" data-color="CRYSTAL"></span>
+              <span class="cdot" style="background:#7a9ab5" data-color="ASHBLUE"></span>
+            </div>
+            <div class="tip-box" style="margin-top:12px">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">SCUDO는 CASTELLO보다 조금 더 동글동글한 형태. "각진 얼굴을 부드럽게 만들어주는 마법의 프레임"으로 설명. 50mm의 작은 사이즈는 얼굴 작은 여성에게 완벽.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">BC7022 ASHBLUE 50</div>
+              <div class="card-subname">SCUDO · 애쉬블루</div>
+            </div>
+            <div class="card-price">125,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:78%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">아세테이트 뿔테</span>
+              <span class="tag tag-face">소·중형</span>
+              <span class="tag tag-tier">시그니처 컬러</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>컬러</td><td>ASHBLUE — 스모키 블루 / 그레이블루</td></tr>
+              <tr><td>희소성</td><td>컬러 특이성으로 차별화 포인트</td></tr>
+              <tr><td>무드</td><td>세련·지적·계절감 있음</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">ASHBLUE는 흔하지 않은 컬러. "이런 컬러 잘 없거든요 — 쓰고 다니면 다들 어디 거냐고 물어봐요." 희소성 강조. 2026 틴트 트렌드와 연결해서 설명 가능.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sub-heading">SPADA 시리즈 (BC7020)</div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">BC7020 BLACK 50</div>
+              <div class="card-subname">SPADA · 블랙</div>
+            </div>
+            <div class="card-price">125,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:78%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">아세테이트 뿔테</span>
+              <span class="tag tag-face">소·중형</span>
+              <span class="tag tag-tier">프리미엄</span>
+              <span class="tag tag-line">SPADA</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>50mm (S)</td></tr>
+              <tr><td>시리즈명</td><td>SPADA = 이탈리아어 "검(劍)"</td></tr>
+              <tr><td>실루엣</td><td>날카로운 직선형 / 예리하고 강한 인상</td></tr>
+              <tr><td>추천대상</td><td>강하고 샤프한 이미지 원하는 고객</td></tr>
+            </table>
+            <div class="color-dots">
+              <span class="cdot" style="background:#111" data-color="BLACK"></span>
+              <span class="cdot" style="background:#888" data-color="GREY"></span>
+              <span class="cdot" style="background:#f0ead8" data-color="CRYSTAL"></span>
+              <span class="cdot" style="background:#7a9ab5" data-color="ASHBLUE (품절)"></span>
+            </div>
+            <div class="tip-box" style="margin-top:12px">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">SPADA·SCUDO·CASTELLO 3형제 중 가장 날카로운 실루엣. "SPADA는 검이라는 뜻이에요. 이름처럼 예리하고 강한 인상이에요." 스토리텔링이 강점. 남성 직장인 강력 추천.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== ED HARDY ==================== -->
+    <div class="section" id="sec-edhardy">
+      <div class="brand-hero">
+        <div class="brand-emblem">EH</div>
+        <div class="brand-info">
+          <div class="brand-name">ED HARDY</div>
+          <div class="brand-tagline">Don Ed Hardy · Art Meets Fashion</div>
+          <div class="brand-desc">세계적인 타투 아티스트 Don Ed Hardy의 아트웍 DNA를 담은 패션 아이웨어 브랜드. 2000년대 글로벌 스트릿 아이콘으로 현재 Y2K 복고 트렌드와 함께 재부상. 185,000~245,000원 프리미엄 포지션. 청광렌즈 기본 포함 모델 다수. 타투 문화·스트릿 패션 관심층 주요 고객.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>185,000~245,000원</b></span>
+            <span class="meta-chip">특징 <b>청광렌즈 기본 포함</b></span>
+            <span class="meta-chip">DNA <b>타투 아트·스트릿</b></span>
+            <span class="meta-chip">트렌드 <b>Y2K 복고 재부상</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-heading">ED5725 시리즈 — 클래식 스퀘어</div>
+      <div class="products-grid">
+
+        <div class="product-card" style="border-color:rgba(224,82,82,0.2)">
+          <div class="card-header">
+            <div>
+              <div class="card-model">ED5725 BLACK 48</div>
+              <div class="card-subname">에드하디 · 블랙 미니</div>
+            </div>
+            <div class="card-price">245,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:90%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">아세테이트 뿔테</span>
+              <span class="tag tag-face">소형얼굴</span>
+              <span class="tag tag-tier">프리미엄</span>
+              <span class="tag tag-line">48mm XS</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>48mm (XS — 매우 작음)</td></tr>
+              <tr><td>컬러</td><td>BLACK — 시그니처 블랙</td></tr>
+              <tr><td>포함사항</td><td>안경테만 (렌즈 별도)</td></tr>
+              <tr><td>스타일</td><td>스몰 스퀘어 / 레트로·힙스터</td></tr>
+              <tr><td>추천얼굴</td><td>계란형 · 긴형</td></tr>
+              <tr><td>추천대상</td><td>얼굴 작은 여성 · Y2K 패션피플</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">"에드하디는 세계적인 타투 아티스트 에드 하디에서 나온 브랜드예요." 브랜드 스토리 먼저 얘기. 48mm는 국내 최소 사이즈급 — 얼굴 작다는 콤플렉스 있는 고객에게 "얼굴이 작으시니까 이 사이즈가 딱이에요" 강점 전환.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">ED5725 AMBER 48</div>
+              <div class="card-subname">에드하디 · 앰버</div>
+            </div>
+            <div class="card-price">245,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:90%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">아세테이트</span>
+              <span class="tag tag-face">소형얼굴</span>
+              <span class="tag tag-tier">프리미엄</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>컬러</td><td>AMBER — 앰버 / 토트 / 투명 황색 계열</td></tr>
+              <tr><td>무드</td><td>빈티지·따뜻·레트로</td></tr>
+              <tr><td>추천피부</td><td>웜톤 (황금빛 피부)</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">AMBER 컬러는 봄/가을 시즌 최고 인기. "요즘 앰버 컬러가 엄청 트렌디해요" + 피부톤 웜톤 매칭 언급. BLACK과 2개 비교로 양쪽 다 보여주는 게 효과적.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-heading">ED5799 시리즈 — 185,000원 라인 (접근성↑)</div>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">ED5799 BLACK 50</div>
+              <div class="card-subname">에드하디 + 청광렌즈</div>
+            </div>
+            <div class="card-price">185,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:72%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">뿔테</span>
+              <span class="tag tag-face">소·중형</span>
+              <span class="tag tag-tier">미드 프리미엄</span>
+              <span class="tag tag-line">청광렌즈 포함</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>50mm (S)</td></tr>
+              <tr><td>컬러</td><td>BLACK</td></tr>
+              <tr><td>포함사항</td><td>청광(블루라이트차단) 렌즈 기본 포함</td></tr>
+              <tr><td>활용</td><td>PC·스마트폰 장시간 사용자 최적</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">245,000원 라인보다 6만원 저렴 + 청광렌즈 포함. "이게 사실 더 실용적이에요. 청광렌즈까지 들어있어서 따로 안 넣으셔도 돼요." PC 많이 쓰는 직장인·학생에게 1순위.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">ED5799 ASH 50</div>
+              <div class="card-subname">에드하디 + 청광렌즈</div>
+            </div>
+            <div class="card-price">185,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:72%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">뿔테</span>
+              <span class="tag tag-face">소·중형</span>
+              <span class="tag tag-tier">미드 프리미엄</span>
+              <span class="tag tag-line">청광렌즈 포함</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>컬러</td><td>ASH — 재색 / 스모키 그레이</td></tr>
+              <tr><td>무드</td><td>차분·지적·중성적</td></tr>
+              <tr><td>추천대상</td><td>블랙은 너무 강하고 투명은 약한 분</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">ASH는 블랙과 투명 중간 — "이게 제일 세련돼 보이는 것 같아요" 개인 의견 살짝 얹기. 중성적인 스타일 원하는 여성·남성 모두 어필.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sub-heading">ED7000 시리즈 — 특수 디자인</div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">ED7035 BLUECREAM 48</div>
+              <div class="card-subname">에드하디 · 블루크림</div>
+            </div>
+            <div class="card-price">185,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:72%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">특수 컬러</span>
+              <span class="tag tag-face">소형얼굴</span>
+              <span class="tag tag-tier">시그니처</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>컬러</td><td>BLUECREAM — 크림+블루 마블 패턴</td></tr>
+              <tr><td>희소성</td><td>매우 독특 — 다른 곳에서 보기 힘듦</td></tr>
+              <tr><td>추천대상</td><td>개성 강한 패션피플</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">"이 컬러는 진짜 특이해서 쓰고 다니면 다들 물어봐요." 희소성 자극. 에드하디의 아트 DNA가 가장 잘 살아있는 컬러. SNS 사진발 잘 받음 언급 가능.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">ED7032 CRYSTAL 47</div>
+              <div class="card-subname">에드하디 · 크리스탈 미니</div>
+            </div>
+            <div class="card-price">245,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:90%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">클리어 뿔테</span>
+              <span class="tag tag-face">소형얼굴</span>
+              <span class="tag tag-tier">프리미엄</span>
+              <span class="tag tag-line">47mm 초소형</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>47mm (초소형 — 극히 작은 얼굴)</td></tr>
+              <tr><td>컬러</td><td>CRYSTAL — 완전 투명 아세테이트</td></tr>
+              <tr><td>트렌드</td><td>마이크로 프레임 / Y2K 복고</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">47mm는 국내 최소 사이즈. 얼굴이 매우 작은 고객에게만 어울림 — 해당 고객에게 "이게 얼굴형에 딱 맞는 사이즈예요" 전문가 포지셔닝. 클리어 프레임 + 마이크로 사이즈 조합은 2026 핵심 트렌드.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== LUXURY ==================== -->
+    <div class="section" id="sec-luxury">
+      <div class="brand-hero">
+        <div class="brand-emblem">✦</div>
+        <div class="brand-info">
+          <div class="brand-name">DIOR · CELINE · FENDI</div>
+          <div class="brand-tagline">Global Luxury Fashion Houses</div>
+          <div class="brand-desc">세계 3대 럭셔리 패션 하우스의 아이웨어. 룩옵티컬이 공식 취급하는 명품 선글라스·안경테. 각 브랜드의 시즌 DNA가 아이웨어에도 그대로 반영됨. 최고가 포지션으로 구매자는 브랜드 파워와 헤리티지에 지불.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">포지션 <b>최고가 명품</b></span>
+            <span class="meta-chip">구매동기 <b>브랜드 파워·헤리티지</b></span>
+            <span class="meta-chip">타깃 <b>40대 이상 고소득</b></span>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:8px;">DIOR</div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">Christian Dior · 파리</div>
+          <div style="font-size:12px;color:var(--text);line-height:1.7;margin-bottom:12px;">여성스러운 캣아이, 기하학적 매트 블랙, CD 로고 장식. 클래식 쿠튀르 헤리티지와 현대적 팝아트의 결합. 블랙&골드 시그니처 컬러웨이.</div>
+          <div class="tip-box">
+            <div class="tip-label">판매 접근법</div>
+            <div class="tip-text">"지난 시즌 파리 런웨이에서 나온 디자인이에요." 쿠튀르 스토리텔링. CD 로고 포인트 강조. 선물 수요 강함 — 포장·케이스 설명 포함.</div>
+          </div>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:8px;">CELINE</div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">Celine · 파리</div>
+          <div style="font-size:12px;color:var(--text);line-height:1.7;margin-bottom:12px;">에디 슬리먼의 미니멀 록시크 DNA. 모노그램 없는 절제된 럭셔리. 두꺼운 아세테이트 프레임과 스퀘어 실루엣이 시그니처. '조용한 럭셔리'의 정점.</div>
+          <div class="tip-box">
+            <div class="tip-label">판매 접근법</div>
+            <div class="tip-text">"셀린느는 로고 없이도 알아보는 브랜드예요." 조용한 럭셔리 원하는 고객에게 최강. 40대 이상 여성 전문직에게 강력 추천.</div>
+          </div>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:8px;">FENDI</div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">Fendi · 로마</div>
+          <div style="font-size:12px;color:var(--text);line-height:1.7;margin-bottom:12px;">FF 로고가 상징적. 젊고 유쾌한 럭셔리 포지션. 투명·컬러 렌즈 활용 활발. 3040 영패셔니스타 주요 타깃. BAGUETTE 등 아이코닉 컬렉션 연계.</div>
+          <div class="tip-box">
+            <div class="tip-label">판매 접근법</div>
+            <div class="tip-text">FF 로고 선글라스는 로고 자체가 아이덴티티. "요즘 인스타에서 제일 많이 보이는 게 펜디 선글라스예요." 젊은 럭셔리 수요에 직결.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== BRIDGE BRANDS ==================== -->
+    <div class="section" id="sec-bridge">
+      <div class="brand-hero">
+        <div class="brand-emblem">✿</div>
+        <div class="brand-info">
+          <div class="brand-name">FERRAGAMO · SANDRO · PAUL SMITH</div>
+          <div class="brand-tagline">Contemporary Luxury · Bridge Brands</div>
+          <div class="brand-desc">명품과 일반 브랜드 사이의 컨템포러리 럭셔리 존. 패션 감도 높은 30~40대가 핵심 타깃. 가격 부담 없이 브랜드 가치를 누릴 수 있는 포지션. 각 브랜드 별 뚜렷한 DNA 보유.</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:8px;">FERRAGAMO</div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">Salvatore Ferragamo · 피렌체</div>
+          <div style="font-size:12px;color:var(--text);line-height:1.7;margin-bottom:12px;">이탈리아 장인 정신의 상징. 겐초 호크 로고·가초 비트 장식. 클래식하면서도 현대적. 구두·핸드백과 동일한 고급 소재 사용. 30~50대 성숙한 패셔니스타.</div>
+          <div class="tip-box">
+            <div class="tip-label">판매 접근법</div>
+            <div class="tip-text">페라가모 구두·가방 가지고 있는 고객에게 "같은 브랜드로 아이웨어도 맞추시면 완성도가 달라요." 브랜드 충성 고객 교차 판매.</div>
+          </div>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:8px;">SANDRO</div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">Sandro Paris · 파리</div>
+          <div style="font-size:12px;color:var(--text);line-height:1.7;margin-bottom:12px;">파리지앵 시크의 정수. 미니멀하고 차분한 색상, 얇은 금속 프레임. 부티크 감성. 트렌디하면서도 시간을 초월하는 스타일. 여성 고객 친화적. SANDRO 6083 모델 인기.</div>
+          <div class="tip-box">
+            <div class="tip-label">판매 접근법</div>
+            <div class="tip-text">"산드로는 파리 감성이에요." 파리 여행·프랑스 패션 좋아하는 고객에게 어필. 기획전(SANDRO 6083 신상) 시즌 강조.</div>
+          </div>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:8px;">PAUL SMITH</div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">Paul Smith · 런던</div>
+          <div style="font-size:12px;color:var(--text);line-height:1.7;margin-bottom:12px;">영국 특유의 유머와 엑센트. 멀티스트라이프 시그니처. 다채로운 컬러 조합이 특징. 클래식하지만 개성 있음. "착실한 반항아"의 아이웨어. 30대 남성 크리에이터 계층 선호.</div>
+          <div class="tip-box">
+            <div class="tip-label">판매 접근법</div>
+            <div class="tip-text">다리(temple) 안쪽의 멀티컬러 스트라이프 보여주기. "이 스트라이프가 폴스미스 시그니처예요." 열어볼수록 발견하는 재미 강조.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SPORTS (NIKE 상세) ==================== -->
+    <div class="section" id="sec-sports">
+      <div class="brand-hero">
+        <div class="brand-emblem">NK</div>
+        <div class="brand-info">
+          <div class="brand-name">NIKE</div>
+          <div class="brand-tagline">Just Do It · Performance Eyewear</div>
+          <div class="brand-desc">세계 1위 스포츠 브랜드의 아이웨어 라인. 폴리카보네이트 충격 강화 렌즈 기본 탑재. 가볍고 강하며 운동 중 충격·진동에 견디는 설계. Swoosh 로고 자체가 신뢰의 상징. 런닝·자전거·골프·테니스 등 모든 종목에 대응하는 스포츠 고글 및 선글라스 라인. 20~40대 액티브한 생활을 즐기는 남녀 고객.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>중가대</b></span>
+            <span class="meta-chip">소재 <b>폴리카보네이트 강화</b></span>
+            <span class="meta-chip">타깃 <b>20~40대 스포츠 라이프</b></span>
+            <span class="meta-chip">특징 <b>충격강화·경량·스포츠 특화</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;">
+          <div style="font-size:13px;font-weight:500;color:var(--cream);margin-bottom:10px;">NIKE 렌즈 기술 — 설명 포인트</div>
+          <div style="font-size:12px;color:var(--text);line-height:1.8;">
+            <b style="color:var(--gold)">폴리카보네이트(PC) 렌즈:</b> 일반 유리 대비 충격 10배 강함. 공이 날아와도 파손 위험 최소화.<br>
+            <b style="color:var(--gold)">ANSI Z87.1:</b> 미국 안전 표준 통과 — 스포츠 보호 안경 공식 인증.<br>
+            <b style="color:var(--gold)">UV400:</b> 자외선 완전 차단으로 장시간 야외 활동에서 눈 보호.<br>
+            <b style="color:var(--gold)">Ventilation 시스템:</b> 렌즈 김서림 방지 — 런닝·자전거 시 쾌적함 유지.
+          </div>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;">
+          <div style="font-size:13px;font-weight:500;color:var(--cream);margin-bottom:10px;">고객 유형별 추천 멘트</div>
+          <div style="font-size:12px;color:var(--text);line-height:1.8;">
+            <b style="color:var(--gold)">런닝족:</b> "달릴 때 일반 선글라스는 흔들리고 불편하잖아요. 이게 딱 잡아줘요."<br>
+            <b style="color:var(--gold)">골프족:</b> "햇빛 강할 때 공 보기 힘드시죠? 편광렌즈로 대비 확 올려드려요."<br>
+            <b style="color:var(--gold)">자전거족:</b> "바람·먼지 차단되면서 시야가 넓어요. 고글형이 딱이에요."<br>
+            <b style="color:var(--gold)">일상 겸용:</b> "운동할 때만 아니라 드라이브·야외에서도 충분히 멋있어요."
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-label">NIKE 판매 전략 핵심</div>
+        <div class="tip-text">운동복·운동화·스포츠 가방 들고 온 고객에게 자연스럽게 어필. "혹시 운동 자주 하세요?" 한 마디로 대화 시작. 일반 안경·선글라스 착용 중인 운동 고객에게 "그거 운동할 때 쓰시기엔 좀 위험하잖아요" — 니즈 환기가 핵심. 나이키 브랜드 자체의 신뢰도가 설명을 반 이상 대신함.</div>
+      </div>
+    </div>
+
+    <!-- ==================== GUIDE ==================== -->
+    <div class="section" id="sec-guide">
+      <div class="brand-hero">
+        <div class="brand-emblem">📊</div>
+        <div class="brand-info">
+          <div class="brand-name">브랜드 포지셔닝 전략</div>
+          <div class="brand-tagline">고객 유형별 브랜드 추천 매트릭스</div>
+          <div class="brand-desc">고객의 예산·라이프스타일·패션 감도에 따른 최적 브랜드 추천 가이드. 20년 경험 기반의 고객 유형 분류와 접근 전략.</div>
+        </div>
+      </div>
+
+      <div class="sub-heading">고객 유형별 추천 브랜드</div>
+      <div style="display:grid;gap:16px;">
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:start;">
+          <div>
+            <div style="font-size:13px;font-weight:500;color:var(--cream);margin-bottom:4px;">👨‍💼 30~40대 직장인 남성</div>
+            <div style="font-size:11px;color:var(--muted);">비즈니스·세련함 추구</div>
+          </div>
+          <div>
+            <div style="font-size:12px;color:var(--text);line-height:1.7;">
+              <b style="color:var(--gold)">1순위:</b> ZINN (68,500원 메탈) — 조용한 럭셔리 완벽 부합<br>
+              <b style="color:var(--gold)">2순위:</b> BLACK CAVALIERE CASTELLO — 125,000원으로 럭셔리 포지션<br>
+              <b style="color:var(--gold)">3순위:</b> FERRAGAMO / PAUL SMITH — 브랜드 가치 원할 때<br>
+              <b style="color:var(--muted)">접근법:</b> 코트·슈트 착용 여부 확인 후 정장과 어울리는 프레임 강조
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:start;">
+          <div>
+            <div style="font-size:13px;font-weight:500;color:var(--cream);margin-bottom:4px;">👩 20~30대 트렌디 여성</div>
+            <div style="font-size:11px;color:var(--muted);">패션 감도 높음</div>
+          </div>
+          <div>
+            <div style="font-size:12px;color:var(--text);line-height:1.7;">
+              <b style="color:var(--gold)">1순위:</b> DUNN / ZINN (68,500원) — 가성비+디자인<br>
+              <b style="color:var(--gold)">2순위:</b> BLACK CAVALIERE SCUDO/SPADA — 125,000원 프리미엄<br>
+              <b style="color:var(--gold)">3순위:</b> SANDRO / CELINE — 파리지앵 감성<br>
+              <b style="color:var(--muted)">접근법:</b> 들고 있는 가방 브랜드로 예산 추정, SNS 트렌드 연결
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:start;">
+          <div>
+            <div style="font-size:13px;font-weight:500;color:var(--cream);margin-bottom:4px;">🎓 10~20대 학생</div>
+            <div style="font-size:11px;color:var(--muted);">예산 민감 / 트렌드 추구</div>
+          </div>
+          <div>
+            <div style="font-size:12px;color:var(--text);line-height:1.7;">
+              <b style="color:var(--gold)">1순위:</b> LOOKY (12,500원) — 가격 부담 제로<br>
+              <b style="color:var(--gold)">2순위:</b> FLEXLITE (18,500원) — 활동성<br>
+              <b style="color:var(--gold)">3순위:</b> LC 스탠다드 32,500원 라인<br>
+              <b style="color:var(--muted)">접근법:</b> 가격 먼저 얘기 금지. 디자인·트렌드로 시작, 가격은 나중에 "이거 얼마예요?"할 때 말하기
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:start;">
+          <div>
+            <div style="font-size:13px;font-weight:500;color:var(--cream);margin-bottom:4px;">🏃 스포츠·아웃도어 고객</div>
+            <div style="font-size:11px;color:var(--muted);">기능성 최우선</div>
+          </div>
+          <div>
+            <div style="font-size:12px;color:var(--text);line-height:1.7;">
+              <b style="color:var(--gold)">1순위:</b> NIKE — 충격강화·경량<br>
+              <b style="color:var(--gold)">2순위:</b> FILA — 스포츠+패션 혼합<br>
+              <b style="color:var(--gold)">3순위:</b> LCG7007 선글라스 — UV400 고글형<br>
+              <b style="color:var(--muted)">접근법:</b> 어떤 운동 하시냐고 먼저 물어보고 그에 맞는 기능 연결
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:start;">
+          <div>
+            <div style="font-size:13px;font-weight:500;color:var(--cream);margin-bottom:4px;">💎 고소득 VIP 고객</div>
+            <div style="font-size:11px;color:var(--muted);">최고를 원함</div>
+          </div>
+          <div>
+            <div style="font-size:12px;color:var(--text);line-height:1.7;">
+              <b style="color:var(--gold)">1순위:</b> DIOR / CELINE / FENDI<br>
+              <b style="color:var(--gold)">2순위:</b> FERRAGAMO<br>
+              <b style="color:var(--gold)">3순위:</b> ED HARDY (아트 컬렉션)<br>
+              <b style="color:var(--muted)">접근법:</b> 브랜드 스토리·헤리티지 먼저. 가격 언급 최소화. "이번 시즌 신상입니다"로 시작
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-heading" style="margin-top:40px">업셀 경로 (단계적 추천 전략)</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap;">
+          <div style="text-align:center;padding:12px 16px;">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:4px">엔트리</div>
+            <div style="background:var(--bg3);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--cream)">LOOKY<br><span style="color:var(--gold);font-size:12px">12,500원</span></div>
+          </div>
+          <div style="color:var(--gold);padding:0 4px;font-size:18px;margin-top:16px">→</div>
+          <div style="text-align:center;padding:12px 12px;">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:4px">기능형</div>
+            <div style="background:var(--bg3);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--cream)">FLEXLITE<br><span style="color:var(--gold);font-size:12px">18,500원</span></div>
+          </div>
+          <div style="color:var(--gold);padding:0 4px;font-size:18px;margin-top:16px">→</div>
+          <div style="text-align:center;padding:12px 12px;">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:4px">스탠다드</div>
+            <div style="background:var(--bg3);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--cream)">LC 스탠다드<br><span style="color:var(--gold);font-size:12px">32,500원~</span></div>
+          </div>
+          <div style="color:var(--gold);padding:0 4px;font-size:18px;margin-top:16px">→</div>
+          <div style="text-align:center;padding:12px 12px;">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:4px">프리미엄</div>
+            <div style="background:var(--bg3);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--cream)">DUNN/ZINN<br><span style="color:var(--gold);font-size:12px">68,500원</span></div>
+          </div>
+          <div style="color:var(--gold);padding:0 4px;font-size:18px;margin-top:16px">→</div>
+          <div style="text-align:center;padding:12px 12px;">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:4px">하이엔드</div>
+            <div style="background:var(--bg3);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--cream)">BLACK CAV<br><span style="color:var(--gold);font-size:12px">125,000원</span></div>
+          </div>
+          <div style="color:var(--gold);padding:0 4px;font-size:18px;margin-top:16px">→</div>
+          <div style="text-align:center;padding:12px 12px;">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:4px">럭셔리</div>
+            <div style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--cream)">DIOR/CELINE<br><span style="color:var(--gold);font-size:12px">고가</span></div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);margin-top:16px;line-height:1.7;">
+          <b style="color:var(--text)">업셀 팁:</b> 고객이 예산보다 한 단계 위 제품을 선택하도록 유도. "딱 3만원만 더 하시면 소재가 완전 달라져요"처럼 작은 차이를 강조. 단 처음부터 비싼 것 보여주지 말고, 중간가부터 시작해서 위아래로 이동.
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ==================== LCG 선글라스 추가 모델 ==================== -->
+    <!-- (기존 sunglasses 섹션에 이미 LCG7007 있음 — LCS 라인 추가) -->
+
+    <!-- ==================== POLICE ==================== -->
+    <div class="section" id="sec-police">
+      <div class="brand-hero">
+        <div class="brand-emblem">PL</div>
+        <div class="brand-info">
+          <div class="brand-name">POLICE</div>
+          <div class="brand-tagline">Italian Men's Premium Eyewear · Since 1983</div>
+          <div class="brand-desc">1983년 이탈리아에서 탄생한 남성 중심 프리미엄 선글라스 브랜드. 강렬하고 대담한 남성 이미지로 전 세계 셀럽·스포츠 스타들의 선택을 받아온 아이웨어 아이콘. SPLT 시리즈가 룩옵티컬 대표 라인. 연예인 착용 이력이 강력한 판매 포인트.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>185,000원~</b></span>
+            <span class="meta-chip">원산지 <b>이탈리아</b></span>
+            <span class="meta-chip">타깃 <b>30~50대 남성</b></span>
+            <span class="meta-chip">DNA <b>대담·강렬·남성미</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-heading">SPLT 시리즈 — 시그니처 선글라스</div>
+      <div class="products-grid">
+
+        <div class="product-card" style="border-color:rgba(201,168,76,0.3)">
+          <div class="card-header">
+            <div>
+              <div class="card-model">SPLT51K 0W87 62</div>
+              <div class="card-subname" style="color:var(--gold2)">⭐ 연예인 착용 인증</div>
+            </div>
+            <div class="card-price">185,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:72%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">스포츠 선글라스</span>
+              <span class="tag tag-face">중·대형얼굴</span>
+              <span class="tag tag-tier">연예인 착용</span>
+              <span class="tag tag-line">62mm XL</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>62mm (XL — 오버사이즈·드라이브)</td></tr>
+              <tr><td>컬러코드</td><td>0W87 — 브라운 계열 미러 렌즈</td></tr>
+              <tr><td>스타일</td><td>보잉형 / 스포츠 럭셔리</td></tr>
+              <tr><td>UV차단</td><td>UV400 완전 차단</td></tr>
+              <tr><td>추천대상</td><td>30~50대 남성 / 드라이브·골프·야외</td></tr>
+              <tr><td>특이사항</td><td>연예인 착용 인증 — 룩옵 공식 홍보</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 필살기</div>
+              <div class="tip-text">"이거 연예인이 착용했던 모델이에요" — 첫 마디에 호기심 폭발. 62mm 오버사이즈로 얼굴을 작아 보이게 하는 효과 설명. 폴리스는 이탈리아 브랜드라는 프리미엄감 언급. 남성 고객에게 드라이브·골프 연계 추천 최강 아이템.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">SPLT47K 0GFL 58</div>
+              <div class="card-subname">POLICE · 클래식 보잉</div>
+            </div>
+            <div class="card-price">185,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:72%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">보잉형</span>
+              <span class="tag tag-face">중·대형얼굴</span>
+              <span class="tag tag-tier">프리미엄</span>
+              <span class="tag tag-line">58mm L</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>58mm (L — 남성 대형)</td></tr>
+              <tr><td>컬러코드</td><td>0GFL — 건메탈 플랫 렌즈 계열</td></tr>
+              <tr><td>스타일</td><td>에비에이터·보잉 / 클래식 남성미</td></tr>
+              <tr><td>추천대상</td><td>40대 이상 남성 / 중후한 이미지</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">SPLT51K보다 사이즈 작아 얼굴 크기 선택지 제공. "연예인 모델이랑 같은 SPLT 라인이에요"로 연결. 건메탈 컬러는 모든 코디에 무난 — 365일 착용 강조.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;margin-top:24px;">
+        <div style="font-size:13px;font-weight:500;color:var(--cream);margin-bottom:10px;">POLICE 브랜드 스토리텔링 포인트</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.8;">
+          ① <b style="color:var(--gold)">1983 이탈리아 탄생</b> — 당시 이탈리아 경찰 스타일에서 영감받아 제작<br>
+          ② <b style="color:var(--gold)">Bruce Willis · Antonio Banderas 착용</b> — 할리우드 남성 아이콘들이 선택한 브랜드<br>
+          ③ <b style="color:var(--gold)">강렬한 남성미</b> — "세련된 동시에 강인한 인상" — 40대 남성 심리 정확히 공략<br>
+          ④ <b style="color:var(--gold)">룩옵 연예인 착용 공식 인증</b> — 신뢰도 최고치로 끌어올릴 수 있는 카드
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== ESCADA ==================== -->
+    <div class="section" id="sec-escada">
+      <div class="brand-hero">
+        <div class="brand-emblem">ES</div>
+        <div class="brand-info">
+          <div class="brand-name">ESCADA</div>
+          <div class="brand-tagline">German Luxury Fashion · Feminine Elegance Since 1976</div>
+          <div class="brand-desc">1976년 독일 뮌헨에서 탄생한 여성 중심 럭셔리 패션 하우스. 화려하고 우아한 여성미가 DNA. 셀럽 착용으로 화제가 된 SESB52G(김남주 선글라스)가 대표 모델. 수트·드레스에 어울리는 격조있는 아이웨어 포지션. 40~60대 여성 고소득층 핵심 고객.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>439,000원~</b></span>
+            <span class="meta-chip">원산지 <b>독일·이탈리아</b></span>
+            <span class="meta-chip">타깃 <b>40~60대 여성</b></span>
+            <span class="meta-chip">DNA <b>화려·우아·페미닌</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card" style="border-color:rgba(201,168,76,0.3)">
+          <div class="card-header">
+            <div>
+              <div class="card-model">SESB52G 0700</div>
+              <div class="card-subname" style="color:var(--gold2)">⭐ 김남주 착용 화제작</div>
+            </div>
+            <div class="card-price">439,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:88%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">럭셔리 선글라스</span>
+              <span class="tag tag-face">중·대형얼굴</span>
+              <span class="tag tag-tier">셀럽 착용</span>
+              <span class="tag tag-line">오버사이즈</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>컬러코드</td><td>0700 — 골드 프레임 계열</td></tr>
+              <tr><td>스타일</td><td>오버사이즈 캣아이 / 페미닌 럭셔리</td></tr>
+              <tr><td>착용 셀럽</td><td>배우 김남주 착용으로 화제</td></tr>
+              <tr><td>소재</td><td>고급 아세테이트 + 금속 장식</td></tr>
+              <tr><td>추천대상</td><td>40~60대 여성 / 우아함 원하는 분</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 필살기</div>
+              <div class="tip-text">"배우 김남주가 착용해서 화제가 된 모델이에요." 셀럽 연계는 여성 고객에게 최강 클로징 카드. ESCADA 자체가 독일 명품이라는 브랜드 프리미엄 충분히 전달. 드레스·수트 착용 자리에 완벽하다는 포인트 강조.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">SES B48G 0A39</div>
+              <div class="card-subname">ESCADA · 페미닌 시그니처</div>
+            </div>
+            <div class="card-price">439,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:88%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">럭셔리 선글라스</span>
+              <span class="tag tag-face">중형얼굴</span>
+              <span class="tag tag-tier">럭셔리</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>컬러코드</td><td>0A39 — 투명/로즈 계열</td></tr>
+              <tr><td>스타일</td><td>라운드 + 메탈 장식 콤비</td></tr>
+              <tr><td>무드</td><td>로맨틱·클래식·우아</td></tr>
+              <tr><td>추천대상</td><td>로맨틱한 스타일 선호 여성</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">SESB52G와 함께 2개 비교 제시. "이쪽은 좀 더 부드럽고 여성스러운 느낌이에요." 선물용으로도 추천 — 케이스·박스 패키지 언급.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;margin-top:24px;">
+        <div style="font-size:13px;font-weight:500;color:var(--cream);margin-bottom:10px;">ESCADA 판매 전략 핵심</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.8;">
+          ① 고객이 가방·스카프·향수 등 명품을 소지했다면 ESCADA 인지도 확인 후 스토리 시작<br>
+          ② 439,000원 이상이지만 "독일 명품에서 이 가격이면 합리적"이라는 가치 역설 적용<br>
+          ③ 김남주 셀럽 착용 에피소드를 자연스럽게 언급 — SNS 인증샷 욕구 자극<br>
+          ④ <b style="color:var(--gold)">선물 수요 강함:</b> 어머니·배우자 선물로 포장·리본 케어 서비스 연계
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== MULBERRY ==================== -->
+    <div class="section" id="sec-mulberry">
+      <div class="brand-hero">
+        <div class="brand-emblem">MB</div>
+        <div class="brand-info">
+          <div class="brand-name">MULBERRY</div>
+          <div class="brand-tagline">British Heritage Luxury · Since 1971</div>
+          <div class="brand-desc">1971년 영국 서머셋에서 탄생한 영국 헤리티지 럭셔리 브랜드. Bayswater 백·Alexa 백으로 유명한 영국 패션의 아이콘. 아이웨어는 영국 특유의 절제된 럭셔리 감성 — 로고 과시 없이 소재와 실루엣으로 품격을 전달. SML 시리즈 선글라스 취급.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>395,000원~</b></span>
+            <span class="meta-chip">원산지 <b>영국</b></span>
+            <span class="meta-chip">타깃 <b>30~50대 패션피플</b></span>
+            <span class="meta-chip">DNA <b>영국 헤리티지·절제된 럭셔리</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">SML290G 0SCL 55</div>
+              <div class="card-subname">MULBERRY · 시그니처 선글라스</div>
+            </div>
+            <div class="card-price">395,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:85%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">럭셔리 선글라스</span>
+              <span class="tag tag-face">중·대형얼굴</span>
+              <span class="tag tag-tier">럭셔리</span>
+              <span class="tag tag-line">55mm L</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>55mm (L — 여성 라지)</td></tr>
+              <tr><td>컬러코드</td><td>0SCL — 스칼렛·크림 계열 (Scarlet/Cream)</td></tr>
+              <tr><td>스타일</td><td>오버사이즈 스퀘어 / 영국 클래식</td></tr>
+              <tr><td>소재</td><td>고급 아세테이트</td></tr>
+              <tr><td>추천대상</td><td>멀버리 핸드백 보유 고객 / 영국 패션 애호가</td></tr>
+              <tr><td>시리즈명</td><td>SML = Sunglasses Mulberry</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">"멀버리 백 갖고 계세요?" — 백 보유 고객에게 자연스러운 연결. "같은 브랜드 선글라스랑 매치하면 완벽한 영국 럭셔리 룩이에요." 0SCL 컬러의 스칼렛(붉은 계열)+크림 조합은 가을 시즌 최고. 영국 왕실 패션 코드 연결 스토리텔링 가능.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;margin-top:24px;">
+        <div style="font-size:13px;font-weight:500;color:var(--cream);margin-bottom:10px;">MULBERRY vs BURBERRY — 고객 혼동 대응</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.8;">
+          고객이 "버버리랑 다른가요?"라고 물을 때: <br>
+          <b style="color:var(--gold)">"멀버리는 버버리보다 조금 더 젊고 독립적인 느낌이에요. 영국 브랜드인 건 같고요. Bayswater 백으로 유명한 브랜드예요."</b><br>
+          두 브랜드 모두 알고 있다는 인상을 주면서 MULBERRY의 차별점 명확히 전달. 핸드백 브랜드 인지도를 아이웨어 신뢰도로 전환하는 것이 핵심.
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== LONGCHAMP ==================== -->
+    <div class="section" id="sec-longchamp">
+      <div class="brand-hero">
+        <div class="brand-emblem">LC</div>
+        <div class="brand-info">
+          <div class="brand-name">LONGCHAMP</div>
+          <div class="brand-tagline">Parisian Chic · Since 1948</div>
+          <div class="brand-desc">1948년 파리에서 탄생. Le Pliage(르 플리아쥬) 백으로 전 세계적으로 유명한 파리지앵 감성 브랜드. 실용적이면서도 세련된 파리 스타일이 아이웨어에도 그대로 반영. LO 시리즈 안경테 295,000원대 — 럭셔리와 컨템포러리 사이의 접근 가능한 가격. 30~50대 여성 주 고객.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">가격 <b>295,000원~</b></span>
+            <span class="meta-chip">원산지 <b>프랑스 파리</b></span>
+            <span class="meta-chip">타깃 <b>30~50대 여성</b></span>
+            <span class="meta-chip">DNA <b>파리지앵·실용적 럭셔리</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LO2539LBJ 714 51</div>
+              <div class="card-subname">LONGCHAMP · 골드 소형</div>
+            </div>
+            <div class="card-price">295,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:80%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">메탈·콤비</span>
+              <span class="tag tag-face">소·중형얼굴</span>
+              <span class="tag tag-tier">컨템포러리 럭셔리</span>
+              <span class="tag tag-line">51mm S</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>51mm (S — 소·중형)</td></tr>
+              <tr><td>컬러코드</td><td>714 — 골드/라이트 계열</td></tr>
+              <tr><td>시리즈</td><td>LO = Longchamp Optical</td></tr>
+              <tr><td>스타일</td><td>정교한 메탈 프레임 / 파리지앵 클래식</td></tr>
+              <tr><td>추천대상</td><td>르 플리아쥬 백 보유 고객 / 파리 감성 좋아하는 여성</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">"롱샴 백 갖고 계세요?" — 보유 여부에 따라 브랜드 신뢰도 즉시 확인. 295,000원은 "파리 브랜드치고 정말 합리적인 가격이에요" 포지셔닝. 산드로·SANDRO와 같은 파리 브랜드 좋아하는 고객층과 100% 오버랩.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LO2500J 002 47</div>
+              <div class="card-subname">LONGCHAMP · 블랙 XS</div>
+            </div>
+            <div class="card-price">295,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:80%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">메탈</span>
+              <span class="tag tag-face">소형얼굴</span>
+              <span class="tag tag-tier">컨템포러리 럭셔리</span>
+              <span class="tag tag-line">47mm XS</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>47mm (XS — 매우 작은 얼굴)</td></tr>
+              <tr><td>컬러코드</td><td>002 — 블랙/다크 계열</td></tr>
+              <tr><td>스타일</td><td>미니 메탈 / 파리지앵 미니멀</td></tr>
+              <tr><td>추천대상</td><td>얼굴 작은 여성 / 미니멀 패션 선호</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">47mm 극소형 — 얼굴이 매우 작은 고객에게 최적. "이렇게 작은 사이즈 파리 브랜드는 거의 없어요." 희소성과 브랜드 파워 동시 어필.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">LO2500J 717 47</div>
+              <div class="card-subname">LONGCHAMP · 골드 XS</div>
+            </div>
+            <div class="card-price">295,000원</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:80%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">메탈 골드</span>
+              <span class="tag tag-face">소형얼굴</span>
+              <span class="tag tag-tier">컨템포러리 럭셔리</span>
+              <span class="tag tag-line">47mm XS</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>렌즈폭</td><td>47mm (XS)</td></tr>
+              <tr><td>컬러코드</td><td>717 — 골드/라이트 계열</td></tr>
+              <tr><td>무드</td><td>우아·화사·클래식 파리</td></tr>
+              <tr><td>추천피부</td><td>웜톤 (황금빛 피부)</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">002 블랙과 717 골드를 동시에 보여주면서 고객 선택 유도. "둘 다 같은 47mm인데 느낌이 완전히 달라요" — 비교 시연으로 결정 유도.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== FILA (상세) ==================== -->
+    <div class="section" id="sec-fila">
+      <div class="brand-hero">
+        <div class="brand-emblem">FI</div>
+        <div class="brand-info">
+          <div class="brand-name">FILA</div>
+          <div class="brand-tagline">Sport Heritage Since 1911 · Retro Athletic Eyewear</div>
+          <div class="brand-desc">1911년 이탈리아 비엘라 창업. 테니스·스키에서 출발한 스포츠 헤리티지 브랜드. 현재는 레트로 스포츠 감성으로 글로벌 패션 씬에서 재조명 중. 룩옵티컬은 FILA 아이웨어를 디자인·유통하는 공식 파트너. 에어플레인티탄(FL7023) 등 고급 소재 라인 보유. 스포츠·패션 양쪽 공략 가능한 전략 브랜드.</div>
+          <div class="brand-meta">
+            <span class="meta-chip">창립 <b>1911년 이탈리아</b></span>
+            <span class="meta-chip">가격 <b>94,000원~</b></span>
+            <span class="meta-chip">특징 <b>에어플레인 티탄 라인</b></span>
+            <span class="meta-chip">타깃 <b>20~40대 스포츠·패션</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-heading">에어플레인 티탄 시리즈 — 프리미엄 라인</div>
+      <div class="products-grid">
+
+        <div class="product-card" style="border-color:rgba(201,168,76,0.3)">
+          <div class="card-header">
+            <div>
+              <div class="card-model">FL7023 에어플레인티탄</div>
+              <div class="card-subname" style="color:var(--gold2)">⭐ 베스트 검색 키워드</div>
+            </div>
+            <div class="card-price">94,000원~</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:60%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">티타늄 메탈</span>
+              <span class="tag tag-face">중·대형얼굴</span>
+              <span class="tag tag-tier">프리미엄 소재</span>
+              <span class="tag tag-line">원형·2컬러</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>소재</td><td>에어플레인 티탄 + 울템 — 항공기급 소재</td></tr>
+              <tr><td>특징</td><td>초경량 / 니켈 기준치 이하 / 알레르기 없음</td></tr>
+              <tr><td>스타일</td><td>원형 메탈 / 클래식·레트로</td></tr>
+              <tr><td>컬러</td><td>2컬러 (실버 계열 / 골드 계열)</td></tr>
+              <tr><td>추천대상</td><td>티타늄 소재 원하는 고객 / 알레르기 있는 분</td></tr>
+              <tr><td>검색 키워드</td><td>"에어플레인티탄" — 룩옵 베스트 키워드 1위</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 필살기</div>
+              <div class="tip-text">"항공기 동체에 쓰는 소재예요." 소재 설명 한 마디에 고객 눈이 커짐. 초경량으로 직접 손바닥에 올려보여 무게감 시연. 니켈 알레르기 있는 고객에게 최고의 솔루션. 룩옵 공식 베스트 검색 키워드 1위 — 이걸 보고 찾아온 고객에게 바로 꺼내기.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <div>
+              <div class="card-model">FL7154 안경테</div>
+              <div class="card-subname">FILA · 스탠다드 라인</div>
+            </div>
+            <div class="card-price">94,050원~</div>
+          </div>
+          <div class="card-body">
+            <div class="tier-bar"><div class="tier-fill" style="width:58%"></div></div>
+            <div class="tag-row">
+              <span class="tag tag-style">메탈·뿔테</span>
+              <span class="tag tag-face">중형얼굴</span>
+              <span class="tag tag-tier">스포츠 헤리티지</span>
+              <span class="tag tag-line">3컬러</span>
+            </div>
+            <table class="spec-table">
+              <tr><td>컬러</td><td>3컬러 — 블랙·실버·골드 계열</td></tr>
+              <tr><td>스타일</td><td>스포츠·패션 겸용 / FILA 박스 로고 포인트</td></tr>
+              <tr><td>추천대상</td><td>FILA 의류 착용 고객 / 레트로 스포츠 감성</td></tr>
+            </table>
+            <div class="tip-box">
+              <div class="tip-label">판매 포인트</div>
+              <div class="tip-text">FILA 의류·신발 보이면 자연스럽게 "아이웨어도 있어요" 연결. 3컬러 중 의류 컬러와 매칭 제안. 브랜드 통일감 소구가 효과적.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sub-heading">FILA 스포츠 선글라스 라인</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;">
+        <div style="font-size:13px;font-weight:500;color:var(--cream);margin-bottom:10px;">FILA SPORTS SUNGLASSES 라인 공략법</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.8;">
+          <b style="color:var(--gold)">자전거·러닝:</b> 폴리카보네이트 경량 렌즈 + 고정력 강한 프레임 — 안전성 강조<br>
+          <b style="color:var(--gold)">골프·야외:</b> UV400 + 편광렌즈 옵션 — 잔디·하늘 반사광 차단 효과 시연<br>
+          <b style="color:var(--gold)">일상 겸용:</b> "운동할 때만 아니라 평소에도 스포츠 감성으로" — 애슬레저 트렌드 연결<br>
+          <b style="color:var(--gold)">FILA 2024 COLLECTION:</b> 시즌 신상 강조로 트렌디한 구매 명분 제공
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== LCG 선글라스 추가 (LCS 시리즈) ==================== -->
+    <!-- 기존 sunglasses 섹션에 LCS 추가를 위해 별도 섹션으로 구성 -->
+    <!-- LCS 모델들은 기존 섹션(LCG7007)에 이미 일부 기재되어 있으나, -->
+    <!-- LCS4305·LCS4297 모델 정보를 아래와 같이 별도로 정리 -->
+
+  </main>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
